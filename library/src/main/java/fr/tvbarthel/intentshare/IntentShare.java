@@ -221,11 +221,12 @@ public final class IntentShare implements Parcelable {
      */
     @NonNull
     public IntentShare image(@NonNull Uri imageUri) {
-        String lastPathSegment = imageUri.getLastPathSegment();
-        if (!lastPathSegment.endsWith(".png") && !lastPathSegment.endsWith(".jpg")) {
-            throw new IllegalArgumentException("Invalid image uri : only .png and .jpg file supported : "
-                    + imageUri);
-        } else if (!"content".equals(imageUri.getScheme())) {
+//        String lastPathSegment = imageUri.getLastPathSegment();
+//        if (!lastPathSegment.endsWith(".png") && !lastPathSegment.endsWith(".jpg")) {
+//            throw new IllegalArgumentException("Invalid image uri : only .png and .jpg file supported : "
+//                    + imageUri);
+//        } else
+        if (!"content".equals(imageUri.getScheme())) {
             throw new IllegalArgumentException("Invalid image uri : only content scheme supported : "
                     + imageUri);
         } else {
